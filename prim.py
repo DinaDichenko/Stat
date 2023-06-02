@@ -1,5 +1,6 @@
 import csv
 import random
+import numpy as np
 
 # Открываем CSV-файл для записи
 with open('dataset.csv', 'w', newline='') as file:
@@ -9,7 +10,7 @@ with open('dataset.csv', 'w', newline='') as file:
     writer.writerow(['Площадь дома (кв.м)', 'Количество комнат', 'Удаленность от центра', 'Цена дома'])
     
     # Генерируем 100 элементов данных
-    for _ in range(100):
+    for _ in np.arange(100):
         # Генерируем случайные значения признаков
         area = random.randint(80, 300)
         rooms = random.randint(1, 5)
